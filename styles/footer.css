@@ -1,0 +1,183 @@
+/* This is the universal selector, which applies the specified styles to all elements on the page. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* These variables help maintain a consistent design and make it easier to update styles globally. */
+:root {
+  --header-bg-color: #191919;
+  --main-bg-color: #e8e8e8;
+  --tax-bg-color: #f9e2e2;
+  --btn-bg-color: #e74c3c;
+  --slish-color: #ababab;
+  --green-color: #007600;
+  --star-color: #f39c12;
+  --dis-color: #27ae60;
+  --white-color: #fff;
+  --hover-color: #ddd;
+  --black-color: #000;
+  --gray-color: #777;
+  --money-color: #333;
+
+  --box-shodow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+/* This rule applies to all elements on the page from html to container*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Let's code with passion and make our project shine!" */
+/* ********** Start Main Styling ********** */
+
+.footer {
+  background-color: var(--header-bg-color);
+  margin-top: 2.5rem;
+}
+
+.footer-container {
+  padding: 2rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  gap: 5.5rem;
+  padding-bottom: 2rem;
+}
+
+.footer-contant {
+  /* border: .2rem solid green; */
+  padding: 0 1rem;
+}
+
+.footer-contant-heading {
+  font-size: 1.6rem;
+  color: var(--white-color);
+  margin: .5rem 0 1.2rem;
+}
+
+.footer-list {
+  font-size: 1.4rem;
+  margin: .8rem 0;
+}
+
+.footer-link {
+  color: var(--hover-color);
+  transition-duration: .35s;
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--btn-bg-color);
+  }
+}
+
+.footer-contacts {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-contact {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--hover-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.footer-icon {
+  font-size: 2rem;
+  transition-duration: .35s;
+}
+
+.footer-contact:hover .footer-icon {
+  color: var(--btn-bg-color);
+}
+
+.footer-bottum {
+  /* border: .2rem solid green; */
+  padding: 2rem 0;
+  border-top: .15rem solid var(--gray-color);
+  text-align: center;
+}
+
+.footer-bottum-h2 {
+  font-size: 2.2rem;
+  color: var(--white-color);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.footer-bottum-para {
+  font-size: 1.4rem;
+  color: var(--hover-color);
+}
+
+.footer-bottum-para-shakoor {
+  font-weight: 600;
+  text-decoration: underline;
+  color: var(--white-color);
+  transition-duration: .35s;
+
+  &:hover {
+    color: var(--btn-bg-color);
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .container.footer-container .footer-top {
+    padding: 0 .5rem 2rem;
+  }
+
+  .footer-top .footer-contant {
+    padding: 0 .5rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container .footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 0 2rem;
+  }
+
+  .footer-contant {
+    padding: 0 .2rem 2rem 2rem;
+    /* display: block;
+    align-items: center;
+    justify-content: center; */
+  }
+}
+
+@media screen and (max-width : 992px) {
+
+  .footer-container {
+    padding: 2rem 0;
+  }
+
+  .footer-top {
+    gap: 2rem;
+  }
+
+}

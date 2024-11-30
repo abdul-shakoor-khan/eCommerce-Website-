@@ -1,0 +1,465 @@
+/* This is the universal selector, which applies the specified styles to all elements on the page. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* These variables help maintain a consistent design and make it easier to update styles globally. */
+:root {
+  --header-bg-color: #191919;
+  --main-bg-color: #e8e8e8;
+  --tax-bg-color: #f9e2e2;
+  --btn-bg-color: #e74c3c;
+  --slish-color: #ababab;
+  --green-color: #007600;
+  --star-color: #f39c12;
+  --dis-color: #27ae60;
+  --white-color: #fff;
+  --hover-color: #ddd;
+  --black-color: #000;
+  --gray-color: #777;
+  --money-color: #333;
+
+  --box-shodow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+/* This rule applies to all elements on the page from html to container*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+li {
+  list-style-type: none;
+}
+
+/* This is none class we can use it for HTML when we want to display none */
+.none {
+  display: none;
+}
+
+/* This is block class we can use it for HTML when we want to display block */
+.block {
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: .2rem .5rem;
+}
+
+/* Let's code with passion and make our project shine!" */
+/* ********** Start Main Styling ********** */
+.main {
+  margin-top: 1rem;
+}
+
+/* DeliveryCheckout Styling */
+.deliveryCheckout-container {
+  display: grid;
+  grid-template-columns: auto 30rem;
+  gap: 1.5rem;
+  margin: 1rem auto;
+}
+
+.delivery-content {
+  display: grid;
+}
+
+.delivery-product {
+  width: 100%;
+  height: 21.2rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--white-color);
+  border-radius: .5rem;
+}
+
+.delivery-h2 {
+  margin-bottom: .7rem;
+  font-size: 2rem;
+  color: var(--green-color);
+}
+
+.delivery-details {
+  display: grid;
+  grid-template-columns: 15rem 1fr 26rem;
+}
+
+.delivery-image {
+  height: 16rem;
+}
+
+.delivery-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.delivery-productDetails {
+  border-right: .1rem solid var(--hover-color);
+  padding: 0 .7rem;
+}
+
+.productDetails-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  letter-spacing: .07rem;
+  margin-bottom: .5rem;
+}
+
+.productDetails-price {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--btn-bg-color);
+  margin-bottom: .5rem;
+}
+
+.productDetail-stock {
+  font-size: 1.2rem;
+  color: var(--green-color);
+  letter-spacing: .06rem;
+  margin-bottom: 1rem;
+}
+
+.delivery-quantity {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  column-gap: .7rem;
+}
+
+.delivery-quantity-select {
+  width: 6rem;
+  height: 2.5rem;
+}
+
+.chBtn {
+  font-size: 1.3rem;
+  color: var(--gray-color);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: .2rem;
+  background-color: transparent;
+  transition: color 0.3s ease;
+
+  &:hover {
+    border-bottom: .1rem solid var(--black-color);
+    color: var(--btn-bg-color);
+  }
+}
+
+.delivery-slash {
+  font-size: 2rem;
+  color: var(--slish-color);
+}
+
+.delivery-options {
+  margin: -.5rem 0 0 .5rem;
+}
+
+.delivery-options-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: .8rem;
+}
+
+.delivery-option {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr;
+  margin-bottom: 1rem;
+  column-gap: .5rem;
+  cursor: pointer;
+}
+
+.delivery-option-input {
+  margin-left: 0;
+  margin-top: .8rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  cursor: pointer;
+}
+
+.delivery-option-date {
+  font-size: 1.6rem;
+  color: var(--green-color);
+  font-weight: 600;
+  margin-bottom: .3rem;
+}
+
+.delivery-option-price {
+  color: var(--gray-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* ** Payment Styling ** */
+.payment-summary {
+  width: 100%;
+  height: 40rem;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: var(--white-color);
+  border-radius: .5rem;
+}
+
+.payment-summary-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.payment-summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: .8rem 0;
+  font-size: 1.6rem;
+}
+
+.payment-summary-row.total-row {
+  font-weight: 600;
+  font-size: 1.8rem;
+  border-top: .1rem solid var(--gray-color);
+  padding-top: 1.5rem;
+}
+
+.payment-summary-money {
+  font-weight: bold;
+  color: var(--money-color);
+}
+
+.payment-summary-row .money {
+  padding-bottom: 8px;
+  border-bottom: .1rem solid var(--hover-color);
+}
+
+.total {
+  color: var(--btn-bg-color);
+}
+
+.payment-summary-checkbox {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0 0;
+  font-size: 1.6rem;
+  column-gap: 1.2rem;
+  font-weight: 600;
+}
+
+.payment-summary-checkbox input {
+  width: 2rem;
+  height: 2rem;
+  border: .1rem solid var(--btn-bg-color);
+}
+
+.place-order-button {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--white-color);
+  border: none;
+  background-color: var(--btn-bg-color);
+  border-radius: .5rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.debit-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: .7rem;
+  padding: .75rem;
+  background-color: var(--header-bg-color);
+}
+
+.debit-card .ri-bank-card-line {
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: var(--hover-color);
+}
+
+
+/* Media Queries for Responsiveness */
+/* *** Max Width 480px *** */
+@media screen and (max-width:480px) {
+
+  /* Delivery Styling */
+  .delivery-product {
+    padding: .5rem;
+  }
+
+  .section .deliveryCheckout-container .delivery-details {
+    grid-template-columns: 11rem 1fr;
+    position: relative;
+    height: 24.5rem;
+  }
+
+  .deliveryCheckout-container .delivery-h2 {
+    width: fit-content;
+    font-size: 1.6rem;
+  }
+
+  .deliveryCheckout-container .delivery-details .delivery-image {
+    height: 12rem;
+  }
+
+  .delivery-details .delivery-image img {
+    height: 100%;
+  }
+
+  .delivery-details .delivery-productDetails {
+    border-right: none;
+    position: absolute;
+    top: 13rem;
+    padding: 0;
+  }
+
+  .productDetails-price {
+    font-size: 2rem;
+  }
+
+  .productDetail-stock {
+    margin-bottom: .6rem;
+  }
+
+  .productDetails-title {
+    max-width: 100vw;
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+
+  .delivery-productDetails .delivery-quantity {
+    margin-left: 0;
+  }
+
+  .delivery-details .delivery-option {
+    width: fit-content;
+    margin-bottom: .5rem;
+    gap: 0;
+  }
+
+  .delOption-main {
+    height: 13.2rem;
+  }
+
+  .delivery-option .delivery-option-price {
+    font-size: 1.2rem;
+  }
+
+  .delOption-main .delivery-options-title {
+    margin-bottom: .5rem;
+  }
+
+  .delivery-option input {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-top: .4rem;
+  }
+
+  /* * Checkout Styling * */
+  .payment-sidebar .payment-summary {
+    height: 40rem;
+  }
+
+  .payment-summary .payment-buttons {
+    display: grid;
+
+  }
+}
+
+/* *** Max Width 700px *** */
+@media screen and (max-width : 700px) {
+
+  /* Mian Styling */
+  .main {
+    margin: 0;
+  }
+
+  /* Container Styling */
+  .section .container {
+    padding: 0;
+  }
+
+  /* Delivery Styling */
+  .delivery-product {
+    height: fit-content;
+  }
+
+  .deliveryCheckout-container .delivery-details {
+    grid-template-columns: 10rem 1fr 18rem;
+  }
+
+  .delivery-details .delivery-image {
+    height: 10rem;
+  }
+
+  .delivery-image img {
+    height: 100%;
+  }
+
+  .delivery-quantity {
+    margin-left: -11rem;
+  }
+
+  .delivery-option {
+    margin-bottom: .7rem;
+  }
+
+  .delivery-options-title {
+    font-size: 1.4rem;
+  }
+
+  .delivery-option-date {
+    font-size: 1.4rem;
+  }
+
+  .delivery-option-price {
+    font-size: 1.3rem;
+  }
+
+}
+
+/* *** Max Width 992px *** */
+@media screen and (max-width : 992px) {
+
+  /* DeliveryCheckout Styling */
+  .section .deliveryCheckout-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .checkout-sidebar {
+    height: fit-content;
+  }
+
+  /* Payment Styling */
+  .payment-summary {
+    height: 34rem;
+  }
+
+  .payment-buttons {
+    display: flex;
+    column-gap: 1rem;
+  }
+
+}

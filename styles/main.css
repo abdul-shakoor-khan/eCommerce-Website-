@@ -1,0 +1,287 @@
+/* These variables help maintain a consistent design and make it easier to update styles globally. */
+:root {
+  --header-bg-color: #191919;
+  --hover-color: #ddd;
+  --main-bg-color: #e8e8e8;
+  --black-color: #000;
+  --tax-bg-color: #f9e2e2;
+  --gray-color: #777;
+  --btn-bg-color: #e74c3c;
+  --star-color: #f39c12;
+  --white-color: #fff;
+  --dis-color: #27ae60;
+  --box-shodow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+/* This container rule applies to all elements on the page */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: .2rem .5rem;
+}
+
+/* Let's code with passion and make our project shine!" */
+/* ********** Start Hero Section Styling ********** */
+.hero-container {
+  display: grid;
+  grid-template-columns: 24rem 1fr;
+  margin-top: 1rem;
+  column-gap: 1rem;
+}
+
+.hero-categories {
+  height: 33.5rem;
+  padding: 1rem 0;
+  background-color: var(--white-color);
+  box-shadow: var(--box-shodow);
+  border-radius: 1.5rem;
+}
+
+.hero-categ .hero-link {
+  display: flex;
+  align-items: center;
+  column-gap: .7rem;
+  padding: .3rem 1rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--hover-color);
+    color: var(--btn-bg-color);
+  }
+}
+
+.hero-link .here-categ-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--hover-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.here-categ-icon .hero-icon {
+  font-size: 1.5rem;
+}
+
+.hero-link .hero-anchor {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--var(--black-color)-color);
+}
+
+.hero-link:hover .hero-anchor {
+  color: var(--btn-bg-color);
+}
+
+/* Swiper Styling */
+.swiper {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ********** Start User Section Styling ********** */
+.user-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  background-color: var(--white-color);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-radius: 1.5rem;
+}
+
+.user {
+  height: 13rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-img {
+  width: 9rem;
+  height: 9rem;
+}
+
+.user-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2.5rem;
+  cursor: pointer;
+}
+
+.user-content {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: .7rem;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--nav-bg-color);
+
+  }
+}
+
+
+/* ********** Start Product Section Styling ********** */
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: .7rem;
+  margin-top: 1rem;
+}
+
+.product {
+  width: auto;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+}
+
+.product img {
+  width: 100%;
+  height: 19rem;
+}
+
+.product-content {
+  height: 9.5rem;
+  background-color: var(--white-color);
+  padding: .4rem .4rem;
+}
+
+.product-heading {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--header-bg-color);
+  line-height: 1.2;
+}
+
+.product-price {
+  margin: .4rem 0 0;
+  display: flex;
+  align-items: center;
+  column-gap: .6rem;
+}
+
+.product-price .current-price {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.product-price .original-price {
+  text-decoration: line-through;
+  font-size: 1.6rem;
+  color: var(--gray-color);
+}
+
+.product-price .discount {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--dis-color);
+}
+
+.product-rating {
+  font-size: 1.6rem;
+  margin-top: .4rem;
+  color: var(--star-color);
+}
+
+.product-rating span {
+  font-size: 1.4rem;
+  color: var(--gray-color);
+}
+
+
+/* Media Queries for Responsiveness */
+/* Max Width 480px */
+@media screen and (max-width : 480px) {
+
+  /* Hero Styling */
+  .main .hero-section .hero-container .hero-slides {
+    height: 13rem;
+  }
+
+  /* User Styling */
+  .user-container {
+    border-radius: 1rem;
+  }
+}
+
+/* Max Width 578px */
+@media screen and (max-width: 578px) {
+
+  /* Hero Styling */
+  .hero-section .hero-container .hero-slides {
+    height: 18rem;
+  }
+}
+
+/* Max Width 768PX */
+@media screen and (max-width: 768px) {
+
+  /* Hero Styling */
+  .hero-container .hero-slides {
+    height: 23rem;
+  }
+}
+
+/* Max Width 992px */
+@media screen and (max-width : 992px) {
+
+  /* Hero Styling */
+  .hero-container {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .hero-categories {
+    display: none;
+  }
+
+  .hero-slides {
+    width: 100%;
+    height: 30rem;
+    border-radius: unset;
+    box-shadow: none;
+  }
+
+  /* Swiper Styling */
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* User Styling */
+  .user-container {
+    margin-top: 0;
+    border-radius: 0;
+  }
+}
